@@ -65,3 +65,15 @@ void Account::print_info() const
     std::cout << "\nDate Created        : " << date_str;
     std::cout << "\n";
 }
+
+int Account::save_account(const char* file) const
+{
+    std::fstream db;
+    db.open(file, std::fstream::app);
+    db << full_name.first_name << " " << full_name.last_name << "\n";
+    db.close();
+    return 0;
+}
+
+Account::~Account()
+{ }

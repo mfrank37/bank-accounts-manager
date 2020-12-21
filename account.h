@@ -1,9 +1,11 @@
 #ifndef ACCOUNT_H
 #define ACCOUNT_H
-
 #include <string>
 #include <iostream>
 #include <time.h>
+#include <fstream>
+#include <regex>
+
 struct Name {
     Name(std::string f_name = "**FirstName**", std::string l_name = "**LastName**")
         : first_name(f_name), last_name(l_name)
@@ -25,7 +27,13 @@ private:
     double balance;
 
 public:
-    Account();
+    Account(){
+        full_name.first_name;
+        srand(time(0));
+        account_number = rand()*rand() % 1000,000,000;
+        date = time(0);
+        balance = 0.0;
+    };
     Account(Name&);
     Account(Name&, int, time_t, double, bool);
     ~Account();
@@ -37,6 +45,11 @@ public:
     Account operator+(Account&);        // for counting all deposits  
     void print_info() const;
     double get_amount() const;
+    int save_account(const char*) const;
+    void set_name(const Name name){
+        full_name.last_name = name.last_name;
+        full_name.first_name = name.first_name;
+    };
 };
 
 #endif /* ACCOUNT_H */
