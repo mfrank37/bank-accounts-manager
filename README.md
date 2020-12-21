@@ -1,1 +1,1 @@
-# bank-accounts-manager
+# BANK ACCOUNTS MANAGER
