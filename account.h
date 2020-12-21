@@ -48,6 +48,8 @@ public:
     int save_account(const char*) const;
     void set_name(const Name name){
         full_name.last_name = name.last_name;
+        full_name.first_name = name.first_name;
     };
 };
 
+#endif /* ACCOUNT_H */

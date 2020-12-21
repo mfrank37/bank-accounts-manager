@@ -30,11 +30,11 @@ Account* get_account(std::regex querry)
 int main(int argc, char** argv)
 {
     line();
-<<<<<<< HEAD
     std::regex find_one("some one|honest man");
     auto account = get_account(find_one);
     // account->get_account(accounts_db.c_str());
-    Name name;
-    Account* my_account = new Account(name);
-    my_account->deposit(100.25);
+    std::cout << "Thanks for using our app!\n";
+    line();
+
+    return 0;
 }
